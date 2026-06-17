@@ -70,9 +70,3 @@ Includes:
 The transaction appears value accretive under the base case assumptions and generates meaningful synergy benefits.
 
 ---
-
-## Author
-
-Your Name
-
-Aspiring Financial Analyst | Business Analyst | Data Analyst
