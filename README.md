@@ -1,5 +1,8 @@
 # 🚗 Uber × Lyft Acquisition Valuation & Financial Model
 
+[![Excel](https://img.shields.io/badge/Microsoft_Excel-Financial_Modeling-217346?logo=microsoftexcel)](https://github.com/rashmileema-BI)
+[![Valuation](https://img.shields.io/badge/Valuation-DCF_%7C_WACC_%7C_Synergies-blue)](https://github.com/rashmileema-BI)
+
 A comprehensive corporate valuation and M&A feasibility model evaluating the strategic acquisition of Lyft by Uber using advanced discounted cash flow (DCF) modeling, synergy valuation, and scenario sensitivity analysis.
 
 ---
