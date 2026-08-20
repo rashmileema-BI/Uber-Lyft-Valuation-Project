@@ -1,47 +1,78 @@
-# 🚗 Uber × Lyft Acquisition Valuation & Financial Model
+# 🚗 Uber × Lyft Acquisition Valuation Analysis
 
 [![Excel](https://img.shields.io/badge/Microsoft_Excel-Financial_Modeling-217346?logo=microsoftexcel)](https://github.com/rashmileema-BI)
 [![Valuation](https://img.shields.io/badge/Valuation-DCF_%7C_WACC_%7C_Synergies-blue)](https://github.com/rashmileema-BI)
 
-A comprehensive corporate valuation and M&A feasibility model evaluating the strategic acquisition of Lyft by Uber using advanced discounted cash flow (DCF) modeling, synergy valuation, and scenario sensitivity analysis.
+A comprehensive corporate valuation and M&A feasibility model evaluating the strategic acquisition of Lyft by Uber using advanced financial modeling, discounted cash flow (DCF) valuation, and scenario sensitivity analysis.
 
 ---
 
-## 🎯 Executive Summary & Objective
+## 🎯 Project Overview
 
-The primary objective of this model is to evaluate whether a transaction between **Uber Technologies, Inc.** and **Lyft, Inc.** creates accretive shareholder value, quantifies cost/operational synergies, and determines an implied acquisition share price range.
+This project evaluates the potential acquisition of Lyft by Uber using financial modeling and valuation techniques.
 
-### Key Finding
-* **Accretion Verdict:** The transaction is **value-accretive** under base-case assumptions, generating significant operational synergy realization across platform SG&A and driver network utilization.
-
----
-
-## 🛠️ Financial Toolkit & Methodology
-
-* **Core Platform:** Microsoft Excel (Multi-Tab Financial Model & Interactive Dashboard)
-* **Valuation Framework:** Discounted Cash Flow (DCF), Terminal Value (Perpetual Growth & Exit Multiple Methods)
-* **Risk & Sensitivity:** Multi-Variable Sensitivity Tables (WACC vs. Terminal Growth Rate)
-* **Forecasting Horizon:** 5-Year Revenue, EBITDA, and Unlevered Free Cash Flow (UFCF) Projections
+The analysis includes:
+* Historical financial analysis
+* Revenue forecasting
+* EBITDA forecasting
+* Free Cash Flow projections
+* DCF valuation
+* Sensitivity analysis
+* Synergy valuation
+* Strategic recommendation
 
 ---
 
-## 📊 Model Structure & Key Outputs
+## 🎯 Objective
 
-### 1. Executive Summary Dashboard
-* **Enterprise Value & Equity Value:** Implied share price bridge comparing standalone vs. combined entity valuation.
-* **Core Metrics Tracked:** Revenue CAGR, EBITDA Margins, Free Cash Flow Conversion, and Deal Accretion/Dilution summary.
+To determine whether the acquisition creates shareholder value and assess the strategic benefits and risks of the transaction.
 
-### 2. Discounted Cash Flow (DCF) & Valuation Mechanics
-* Historical financial normalization (Revenue, Cost of Revenue, Operations & Support, R&D, SG&A).
-* **Unlevered Free Cash Flow Projections:**
-  $$\text{UFCF} = \text{EBIT} \times (1 - t) + \text{D\&A} - \text{CAPEX} - \Delta \text{NWC}$$
-* **WACC & Terminal Value Calculations:** Sensitivity matrices assessing enterprise value impact across varying discount rates (8.0% – 12.0%) and long-term growth rates (2.0% – 3.5%).
+---
 
-### 3. Synergies & Strategic Rationale
-* **Cost Synergies:** Elimination of redundant corporate overhead, marketing expense rationalization, and tech stack consolidation.
-* **Network Synergies:** Optimization of driver supply liquidity, reducing rider wait times and driver deadhead miles.
-* **Key Deal Risks:** Regulatory antitrust scrutiny and market concentration considerations.
+## 🛠️ Tools Used
+
+* Microsoft Excel
+* Financial Modeling
+* DCF Valuation
+* Scenario Analysis
+* Sensitivity Analysis
+
+---
+
+## 📊 Key Outputs
+
+### 1. Executive Dashboard
+Provides an overview of:
+* Enterprise Value
+* Implied Share Price
+* Revenue CAGR
+* EBITDA Margin
+* Final Strategic Recommendation
+
+### 2. Transaction Overview
+Summarizes:
+* Strategic rationale
+* Expected synergies (cost reduction and operational efficiencies)
+* Deal structure
+* Key risks and regulatory considerations
+
+### 3. Valuation Analysis
+Includes:
+* 5-Year DCF model
+* Terminal value calculation (Perpetual Growth & Exit Multiple)
+* WACC assumptions and discount rate modeling
+* Multi-variable sensitivity tables (WACC vs. Terminal Growth Rate)
+
+---
+
+## 📈 Key Result
+
+The transaction appears **value-accretive** under the base-case assumptions and generates meaningful synergy benefits across platform operational consolidation and driver network liquidity.
 
 ---
 
 ## 📁 Repository Structure
+
+* `models/` - Contains the Excel financial model workbook
+* `dashboards/` - Executive summary dashboard sheets and visual summaries
+* `README.md` - Documentation and analytical breakdown
