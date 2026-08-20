@@ -1,82 +1,44 @@
-# 📊 Uber × Lyft M&A Valuation & Financial Strategy Model
+# 🚗 Uber × Lyft Acquisition Valuation & Financial Model
 
-[![Financial Modeling](https://img.shields.io/badge/Financial_Modeling-DCF%20%7C%20LBO%20%7C%20M%26A-2E7D32)](https://github.com/rashmileema-BI)
-[![Excel](https://img.shields.io/badge/Excel-Sensitivity%20Tables%20%7C%20Dynamic%20Scenarios-107C41?logo=microsoftexcel)](https://github.com/rashmileema-BI)
-[![Python](https://img.shields.io/badge/Python-Valuation_Simulation-3776AB?logo=python)](https://github.com/rashmileema-BI)
-
-A comprehensive corporate valuation and acquisition feasibility study evaluating the strategic acquisition of Lyft by Uber Technologies. Built to analyze market share consolidation, SG&A cost synergies, unit economics (Take Rate vs. Driver Incentives), and DCF valuation ranges.
+A comprehensive corporate valuation and M&A feasibility model evaluating the strategic acquisition of Lyft by Uber using advanced discounted cash flow (DCF) modeling, synergy valuation, and scenario sensitivity analysis.
 
 ---
 
-## 🛠️ Core Analytical Toolkit
+## 🎯 Executive Summary & Objective
 
-* **Valuation Frameworks:** Discounted Cash Flow (DCF), Comparable Company Analysis (Trading Comps), Precedent Transactions.
-* **Financial Modeling:** 5-Year Pro-Forma Income Statement, EBITDA bridge, Working Capital schedules, and Unlevered Free Cash Flow (UFCF) projections.
-* **Scenario & Sensitivity Analysis:** Two-way sensitivity matrices analyzing WACC vs. Terminal Growth Rate ($g$) and SG&A Synergy Realization %.
+The primary objective of this model is to evaluate whether a transaction between **Uber Technologies, Inc.** and **Lyft, Inc.** creates accretive shareholder value, quantifies cost/operational synergies, and determines an implied acquisition share price range.
 
----
-
-## 🎯 Strategic & Quantitative Deliverables
-
-1. **Unit Economics & Take-Rate Benchmark:** Evaluated platform monetization across Gross Bookings, Take Rates, and Driver Acquisition Costs (CAC) to identify cost duplication.
-2. **Synergy Modeling & Run-Rate Accretion:** Quantified \$450M+ in operational and G&A cost rationalization across mapped engineering and operational infrastructure.
-3. **Discounted Cash Flow (DCF) Architecture:**
-   $$\text{Enterprise Value} = \sum_{t=1}^{5} \frac{\text{UFCF}_t}{(1 + \text{WACC})^t} + \frac{\text{Terminal Value}}{(1 + \text{WACC})^5}$$
-   $$\text{Terminal Value (Perpetual Growth)} = \frac{\text{UFCF}_5 \times (1 + g)}{\text{WACC} - g}$$
+### Key Finding
+* **Accretion Verdict:** The transaction is **value-accretive** under base-case assumptions, generating significant operational synergy realization across platform SG&A and driver network utilization.
 
 ---
 
-## 📈 DCF Valuation Summary & Sensitivity Matrix
+## 🛠️ Financial Toolkit & Methodology
 
-* **Base Case WACC:** 9.25% (Risk-free rate 4.10%, Beta 1.35, Equity Risk Premium 5.50%)
-* **Perpetual Growth Rate ($g$):** 2.50%
-* **Implied Equity Value per Share:** \$19.80 – \$24.50 (vs. baseline market price at offer of \$16.20)
-* **Transaction Verdict:** **Value Accretive** with a 15–22% upside under base synergy realization.
-
-### Two-Way Implied Share Price Sensitivity Matrix ($)
-
-| WACC \ Perpetual Growth ($g$) | 2.00% | 2.50% (Base) | 3.00% |
-| :--- | :---: | :---: | :---: |
-| **8.50%** | \$23.40 | \$25.80 | \$28.70 |
-| **9.25% (Base)** | \$20.10 | **\$22.15** | \$24.60 |
-| **10.00%** | \$17.50 | \$19.20 | \$21.10 |
+* **Core Platform:** Microsoft Excel (Multi-Tab Financial Model & Interactive Dashboard)
+* **Valuation Framework:** Discounted Cash Flow (DCF), Terminal Value (Perpetual Growth & Exit Multiple Methods)
+* **Risk & Sensitivity:** Multi-Variable Sensitivity Tables (WACC vs. Terminal Growth Rate)
+* **Forecasting Horizon:** 5-Year Revenue, EBITDA, and Unlevered Free Cash Flow (UFCF) Projections
 
 ---
 
-## 💻 Python Financial Valuation Script (`valuation_engine.py`)
+## 📊 Model Structure & Key Outputs
 
-```python
-import numpy as np
-import pandas as pd
+### 1. Executive Summary Dashboard
+* **Enterprise Value & Equity Value:** Implied share price bridge comparing standalone vs. combined entity valuation.
+* **Core Metrics Tracked:** Revenue CAGR, EBITDA Margins, Free Cash Flow Conversion, and Deal Accretion/Dilution summary.
 
-# 5-Year Projected Unlevered Free Cash Flows (USD Millions)
-projections = {
-    "Year": [1, 2, 3, 4, 5],
-    "Revenue": [4850, 5380, 5920, 6450, 6980],
-    "EBITDA": [420, 580, 750, 920, 1100],
-    "UFCF": [280, 395, 520, 650, 780]
-}
+### 2. Discounted Cash Flow (DCF) & Valuation Mechanics
+* Historical financial normalization (Revenue, Cost of Revenue, Operations & Support, R&D, SG&A).
+* **Unlevered Free Cash Flow Projections:**
+  $$\text{UFCF} = \text{EBIT} \times (1 - t) + \text{D\&A} - \text{CAPEX} - \Delta \text{NWC}$$
+* **WACC & Terminal Value Calculations:** Sensitivity matrices assessing enterprise value impact across varying discount rates (8.0% – 12.0%) and long-term growth rates (2.0% – 3.5%).
 
-df = pd.DataFrame(projections)
+### 3. Synergies & Strategic Rationale
+* **Cost Synergies:** Elimination of redundant corporate overhead, marketing expense rationalization, and tech stack consolidation.
+* **Network Synergies:** Optimization of driver supply liquidity, reducing rider wait times and driver deadhead miles.
+* **Key Deal Risks:** Regulatory antitrust scrutiny and market concentration considerations.
 
-wacc = 0.0925
-terminal_growth = 0.0250
-net_debt = 850
-shares_outstanding = 410
+---
 
-# Calculate Present Value of UFCF
-df["PV_UFCF"] = df["UFCF"] / ((1 + wacc) ** df["Year"])
-sum_pv_ufcf = df["PV_UFCF"].sum()
-
-# Terminal Value Calculation
-terminal_value = (df["UFCF"].iloc[-1] * (1 + terminal_growth)) / (wacc - terminal_growth)
-pv_terminal_value = terminal_value / ((1 + wacc) ** 5)
-
-# Enterprise & Equity Value
-enterprise_value = sum_pv_ufcf + pv_terminal_value
-equity_value = enterprise_value - net_debt
-implied_share_price = equity_value / shares_outstanding
-
-print(f"Enterprise Value: ${enterprise_value:,.2f}M")
-print(f"Equity Value: ${equity_value:,.2f}M")
-print(f"Implied Share Price: ${implied_share_price:.2f}")
+## 📁 Repository Structure
