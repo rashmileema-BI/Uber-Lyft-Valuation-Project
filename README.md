@@ -70,9 +70,3 @@ Includes:
 The transaction appears **value-accretive** under the base-case assumptions and generates meaningful synergy benefits across platform operational consolidation and driver network liquidity.
 
 ---
-
-## 📁 Repository Structure
-
-* `models/` - Contains the Excel financial model workbook
-* `dashboards/` - Executive summary dashboard sheets and visual summaries
-* `README.md` - Documentation and analytical breakdown
